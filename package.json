@@ -1,0 +1,28 @@
+{
+  "name": "tweet-reader-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erik Berkun-Drevnig",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.0",
+    "moment": "^2.14.1",
+    "twitter-text": "^1.14.0"
+  },
+  "dependencies": {
+    "moment": "^2.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eberkund/tweet-reader-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eberkund/tweet-reader-client/issues"
+  },
+  "homepage": "https://github.com/eberkund/tweet-reader-client",
+  "description": ""
+}
