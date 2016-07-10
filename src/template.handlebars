@@ -1,8 +1,8 @@
 <ul>
   {{#each this}}
     <li>
-      <p>{{{autoLink text}}}</p>
-      <p>{{prettyDate created_at}}</p>
+      <p class="tweet-text">{{{autoLink text}}}</p>
+      <p class="tweet-time">{{prettyDate created_at}}</p>
     </li>
   {{/each}}
 </ul>

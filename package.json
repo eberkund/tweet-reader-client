@@ -27,5 +27,5 @@
     "url": "https://github.com/eberkund/tweet-reader-client/issues"
   },
   "homepage": "https://github.com/eberkund/tweet-reader-client",
-  "description": ""
+  "description": "A simple script for inserting tweets into a static website."
 }
