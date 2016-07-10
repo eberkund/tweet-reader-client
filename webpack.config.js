@@ -36,6 +36,6 @@
           }
         }),
 
-        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/)
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
       ]
     }
