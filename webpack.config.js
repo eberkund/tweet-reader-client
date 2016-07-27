@@ -7,7 +7,7 @@
       output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
-        filename: 'bundle.min.js'
+        filename: 'tweet-reader-client.min.js'
       },
 
       resolveLoader: {
