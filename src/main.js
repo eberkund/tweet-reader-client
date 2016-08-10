@@ -1,19 +1,19 @@
-(function () {
-  let template = require('./template.handlebars')
-  let handlebars = require('handlebars/runtime')
-  let twitter = require('twitter-text')
-  let moment = require('moment')
+import moment from 'moment'
+import template from './template.handlebars'
+import handlebars from 'handlebars/runtime'
+import twitter from 'twitter-text'
 
-  handlebars.registerHelper('prettyDate', function (timestamp) {
+(function () {
+  handlebars.registerHelper('prettyDate', (timestamp) => {
     return moment(new Date(timestamp)).fromNow()
   })
 
-  handlebars.registerHelper('autoLink', function (tweet) {
+  handlebars.registerHelper('autoLink', (tweet) => {
     return twitter.autoLink(tweet)
   })
 
-  $.get('tweets.json', function (data) {
-    var html = template(data)
+  $.get('tweets.json', (data) => {
+    let html = template(data)
     $('#twitter-timeline').html(html)
   })
 })()
