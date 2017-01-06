@@ -14,7 +14,7 @@ handlebars.registerHelper('autoLink', tweet => {
 
 axios.get('tweets.json').then(response => {
   let container = document.getElementById('twitter-timeline')
-  container.innerHTML = template(response)
+  container.innerHTML = template(response.data)
 }).catch(error => {
   console.error(error)
 })
