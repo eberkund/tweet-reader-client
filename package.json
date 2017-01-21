@@ -23,7 +23,7 @@
     "moment": "^2.14.1",
     "path": "^0.12.7",
     "twitter-text": "^1.14.0",
-    "webpack": "2.2.0-rc.3"
+    "webpack": "^2.2.0"
   },
   "repository": {
     "type": "git",
