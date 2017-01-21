@@ -1,5 +1,5 @@
 import moment from 'moment'
-import template from './template.js'
+import template from './template.handlebars'
 import handlebars from 'handlebars/runtime'
 import { autoLink } from 'twitter-text'
 import { get } from 'axios'
