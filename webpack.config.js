@@ -10,10 +10,6 @@ module.exports = {
     filename: 'tweet-reader-client.min.js'
   },
 
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
-  },
-
   resolve: {
     alias: {
       moment: path.join(__dirname, 'node_modules/moment/min/moment.min.js')
@@ -21,26 +17,20 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.handlebars$/,
-        loader: 'handlebars-loader'
+        use: ['handlebars-loader']
       },
       {
         test: /\.js$/,
-        loader: 'babel?presets[]=es2015',
+        use: ['babel-loader'],
         exclude: /node_modules/
       }
     ]
   },
 
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 }
