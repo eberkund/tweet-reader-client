@@ -1,11 +1,11 @@
-import moment from 'moment'
+import distanceInWords from 'date-fns/distance_in_words'
 import template from './template.handlebars'
 import handlebars from 'handlebars/runtime'
 import { autoLink } from 'twitter-text'
 import { get } from 'axios'
 
 handlebars.registerHelper('prettyDate', timestamp => {
-  return moment(new Date(timestamp)).fromNow()
+  return distanceInWords(new Date(), new Date(timestamp), {addSuffix: true})
 })
 
 handlebars.registerHelper('autoLink', tweet => {
