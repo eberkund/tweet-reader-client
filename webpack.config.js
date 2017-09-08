@@ -10,12 +10,6 @@ module.exports = {
     filename: 'tweet-reader-client.min.js'
   },
 
-  resolve: {
-    alias: {
-      moment: path.join(__dirname, 'node_modules/moment/min/moment.min.js')
-    }
-  },
-
   module: {
     rules: [
       {
@@ -28,9 +22,5 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  },
-
-  plugins: [
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-  ]
+  }
 }
