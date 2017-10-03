@@ -1,0 +1,41 @@
+<ul>
+  {{#each tweets as tweet}}
+  <li>
+    <p class="tweet-text">{{{ autoLink(tweet.text) }}}</p>
+    <p class="tweet-time">{{ prettyDate(tweet.created_at) }}</p>
+  </li>
+  {{/each}}
+</ul>
+
+<script>
+  import distanceInWords from 'date-fns/distance_in_words'
+  import { autoLink } from 'twitter-text'
+  import { get } from 'axios'
+
+  export default {
+    data() {
+      return {
+        tweets: []
+      }
+    },
+    oncreate() {
+      get('/tweets.json').then(response => {
+        this.set({
+          tweets: response.data
+        })
+      }).catch(error => {
+        console.error(error)
+      })
+    },
+    helpers: {
+      autoLink: tweet => {
+        return autoLink(tweet)
+      },
+      prettyDate: timestamp => {
+        return distanceInWords(new Date(), new Date(timestamp), {
+          addSuffix: true
+        })
+      }
+    }
+  }
+</script>

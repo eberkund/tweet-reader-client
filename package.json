@@ -1,30 +1,10 @@
 {
-  "name": "tweet-reader-client",
-  "version": "1.0.2",
-  "main": "dist/bundle.min.js",
-  "scripts": {
-    "build": "webpack -p"
-  },
-  "author": "Erik Berkun-Drevnig",
+  "name": "tweet-reader-client2",
+  "description": "A simple script for inserting tweets into a static website.",
+  "version": "1.0.0",
+  "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "axios": "^0.16.2",
-    "babel": "^6.23.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2015-webpack": "^6.4.3",
-    "date-fns": "^1.28.5",
-    "eslint": "^4.6.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "handlebars": "^4.0.10",
-    "handlebars-loader": "^1.6.0",
-    "path": "^0.12.7",
-    "twitter-text": "^1.14.7",
-    "webpack": "^3.5.6"
-  },
+  "homepage": "https://github.com/eberkund/tweet-reader-client",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eberkund/tweet-reader-client.git"
@@ -32,6 +12,26 @@
   "bugs": {
     "url": "https://github.com/eberkund/tweet-reader-client/issues"
   },
-  "homepage": "https://github.com/eberkund/tweet-reader-client",
-  "description": "A simple script for inserting tweets into a static website."
+  "scripts": {
+    "build": "NODE_ENV=development node_modules/webpack/bin/webpack.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --optimize-minimize"
+  },
+  "devDependencies": {
+    "axios": "^0.16.2",
+    "date-fns": "^1.28.5",
+    "svelte": "^1.40.1",
+    "twitter-text": "^1.14.7",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "svelte-loader": "^2.1.0",
+    "webpack": "^3.6.0"
+  }
 }
