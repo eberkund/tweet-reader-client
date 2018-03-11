@@ -1,5 +1,5 @@
 {
-  "name": "tweet-reader-client2",
+  "name": "tweet-reader-client",
   "description": "A simple script for inserting tweets into a static website.",
   "version": "1.1.0",
   "main": "index.js",
